@@ -1,0 +1,17 @@
+package W1D5HW;
+
+public class EmailHW {
+	public static void main(String[] args) {
+		String a1= "assem.alturifi@gmail.com";
+		
+		System.out.println(isRightEmail(a1) );
+		
+		
+		
+	}
+	public static boolean isRightEmail(String word) {
+		
+		return true;
+	}
+	
+}

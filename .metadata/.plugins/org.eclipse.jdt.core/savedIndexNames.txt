@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/Users/assemalturifi/Desktop/JavaApolis/.metadata/.plugins/org.eclipse.jdt.core
+1093467490.index
+1551986704.index
+3500325642.index
+457712005.index
+601325085.index
+3885802259.index

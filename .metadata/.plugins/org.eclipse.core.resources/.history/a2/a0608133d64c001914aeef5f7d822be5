@@ -1,0 +1,51 @@
+package ShallowNDeepStringCompareToEqual;
+
+public class Demo {
+	public static void main(String []arg)
+	{ 
+		String s1="japan";
+		String s2="India";
+		String s3="JAPAN";
+		String s4="japan";
+		
+		String s5=new String("japan");
+		String s6=new String("INDIA");
+		String s7=new String("US");
+		 
+		System.out.println(s1.equals(s4));
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equals(s3));
+		System.out.println(s1.equals(s5));
+		System.out.println(s1.equalsIgnoreCase(s3));
+		
+		System.out.println("===================");
+		
+		System.out.println(s1==s4);
+		System.out.println(s1==s2);
+		System.out.println(s1==s3);
+		System.out.println(s1==s5);
+		System.out.println(s5==s6);
+		
+		System.out.println("===================");
+		
+		System.out.println(s1.compareTo(s4));
+		System.out.println(s1.compareTo(s2));
+		System.out.println(s1.compareTo(s3));
+		System.out.println(s1.compareTo(s5));
+		System.out.println(s5.compareTo(s6));
+		System.out.println(s2.compareTo(s1));
+		System.out.println("===================");
+		
+		
+		StringBuffer str=new StringBuffer("This is new String");
+		str.append("for java");
+		System.out.println(str);
+		
+		StringBuilder strbuld=new StringBuilder("This is new String");
+		strbuld.append("for java");
+		System.out.println(strbuld);
+		strbuld.replace(6, 12, "modify");
+		System.out.println(strbuld);
+		
+	}
+}

@@ -1,0 +1,32 @@
+package stringTokenizer;
+
+import java.util.StringTokenizer;
+
+public class Demo {
+
+	
+	
+	public static void main(String []arg)
+	{ 
+		StringTokenizer str=new StringTokenizer("Java is the programming lang");
+	     
+		System.out.println("number of tokens:"+str.countTokens());
+		
+		while(str.hasMoreTokens())
+		{
+			System.out.println("next token:" +str.nextToken());
+		}
+	
+		while(str.hasMoreElements())
+		{
+			System.out.println("next Element:" +str.nextElement());
+		}
+		
+		
+		StringTokenizer strtkn=new StringTokenizer("Java/is/the/programming/lang");
+		while(strtkn.hasMoreTokens())
+		{
+			System.out.println("next token:" +strtkn.nextToken("/"));
+		}
+	}
+}

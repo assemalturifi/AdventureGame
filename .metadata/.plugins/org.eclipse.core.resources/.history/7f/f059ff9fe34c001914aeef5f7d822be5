@@ -1,0 +1,52 @@
+package W1D5HW;
+
+import java.util.regex.Pattern;
+
+public class EmailHW {
+	public static void main(String[] args) {
+		String emailAddress= "assemaltutifi@gmail.com";
+		
+		System.out.println(isRightEmail(emailAddress) );
+		
+		System.out.println("===========");
+		
+		String passcode="Assem_Assem_122";
+		
+		System.out.println(isPasscodeRight(passcode));
+		
+		
+		
+		
+		
+	}
+	public static boolean isRightEmail(String word) {
+		String a="^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+		
+		Pattern emailAddresspattern=Pattern.compile(a);
+		
+		if(emailAddresspattern.matcher(word).matches()) {
+			
+			return true;
+		}
+		
+		else {
+			System.out.println("The email address you entered is incorrect");
+			return false;
+		}
+	}
+	
+	public static boolean isPasscodeRight(String passcode) {
+		String a="^.*(?=.{8,})(?=.*\\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$";
+		
+		Pattern passcodePattern=Pattern.compile(a);
+		
+		if(passcodePattern.matcher(passcode).matches()) {
+			return true;
+		}
+		else {
+			System.out.println("The passcode you entered is incorrect");
+			return false;
+		}
+	}
+	
+}

@@ -1,0 +1,95 @@
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+import org.graalvm.compiler.word.Word;
+
+public class HW1 {
+	public static Scanner scanner=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		
+
+		String a="assem";
+		
+		int idk=a.compareTo("s");
+		
+		System.out.println(idk);
+
+		
+		
+	}
+	public static void HW1(String obj) {
+		System.out.println("to Add the string to it self, select A");
+		System.out.println("to Replace odd positions with #, select R");
+		System.out.println("to remove duplicate characters in the String, select rd");
+		System.out.println("to change odd characters to upper case, select c");
+		
+		String userChoice=scanner.nextLine().toLowerCase();
+		
+		switch(userChoice) {
+		case "a":
+			String newString=obj+obj;
+			System.out.println(newString);
+			break;
+		case "r":
+			String allAlp="BCDFGHJKLMNPQRSTVXZAEIOU0123456789";
+			
+			for(int i=0;i<obj.length();i++) {
+				for(int j=1;j<obj.length()-1;j++) {
+					if(obj.charAt(i)!=allAlp.charAt(j)) {
+						obj.replace(obj.charAt(i), '#');
+					}
+					
+				}
+			
+			
+			}
+			System.out.println(obj);
+			break;
+		case "rd":
+			
+			break;
+			
+			
+		}
+	}
+	public static boolean HW2(String word) {
+		 
+			
+		
+			for(int i=0;i<word.length()-1;i++) {
+				if(word.charAt(i)>word.charAt(i+1)) {
+					System.out.println("it is true");
+					return true;
+				}
+				
+			}
+			System.out.println("it is false");
+			return false;
+	}
+	public static void HW3(int day,int month,int year) {
+		LocalDate endofCentury = LocalDate.of(year, month, day);
+		LocalDate now = LocalDate.now();
+		 
+		Period diff = Period.between(endofCentury, now);
+		 
+		System.out.printf("Difference is %d years, %d months and %d days old",
+		                    diff.getYears(), diff.getMonths(), diff.getDays());
+	
+		
+	}
+	public static void HW4(int day,int month,int year) {
+		LocalDate endofCentury = LocalDate.of(year, month, day);
+		LocalDate now = LocalDate.now();
+		 
+		Period diff = Period.between(endofCentury, now);
+		 
+		System.out.printf("Difference is %d years, %d months and %d days old",
+		                    diff.getYears(), diff.getMonths(), diff.getDays());
+	
+		
+	}
+	
+
+}

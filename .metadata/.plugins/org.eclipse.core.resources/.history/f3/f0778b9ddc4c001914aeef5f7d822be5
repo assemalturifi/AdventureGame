@@ -1,0 +1,31 @@
+package assem.com;
+
+import java.util.regex.Pattern;
+
+public class RegularExpression {
+	
+	public static void main (String args[]) {
+		
+		String str="java is the programing lang";
+		
+		String pattern=".*Java.*";
+		
+		boolean isMatch=Pattern.matches(pattern, str);
+		
+		System.out.println(isMatch);
+		
+		
+		
+		Pattern par=Pattern.compile(pattern,Pattern.CASE_INSENSITIVE);
+		
+		
+		System.out.println(par);
+		
+		
+		
+		
+		
+		
+	}
+
+}

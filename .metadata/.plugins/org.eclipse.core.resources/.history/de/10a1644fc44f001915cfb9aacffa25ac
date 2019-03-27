@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class HW1 {
+	public static Scanner scanner=new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		
+		
+		//Create a method which can perform a particular 
+		//String operation based on the user’s choice. 
+//		The method should accept the String object and 
+//		the user’s choice and return the output of the operation.
+//		Options are
+//		Add the String to itself
+//		Replace odd positions with #
+//		Remove duplicate characters in the String
+//		Change odd characters to upper case
+
+		HW1("assem");
+		
+	}
+	public static void HW1(String obj) {
+		System.out.println("to add the string to it self, select A");
+		
+		String userChoice=scanner.nextLine().toLowerCase();
+		
+		switch(userChoice) {
+		case "a":
+			String newString=obj+obj;
+			System.out.println(newString);
+		}
+	}
+
+}

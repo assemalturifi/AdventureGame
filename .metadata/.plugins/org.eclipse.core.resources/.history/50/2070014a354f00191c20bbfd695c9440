@@ -1,0 +1,23 @@
+import java.io.File;
+import java.io.FileOutputStream;
+
+public class FileEx {
+	public static void main(String[] args) {
+		
+		File dir=new File("TestDirectory.txt");
+		boolean succesful=dir.mkdir();
+		
+		System.out.println(succesful);
+		
+		
+		try {
+		FileOutputStream out=new FileOutputStream("testFile.txt");
+		
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package W1D5HW;
+
+import java.util.regex.Pattern;
+
+public class EmailHW {
+	public static void main(String[] args) {
+		String a1= "assemaltutifi@gmail.com";
+		
+		System.out.println(isRightEmail(a1) );
+		
+		
+		
+		
+		
+	}
+	public static boolean isRightEmail(String word) {
+		String a="^[\\\\w!#$%&'*+/=?`{|}~^-]+(?:\\\\.[\\\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\\\.)+[a-zA-Z]{2,6}$\"";
+		
+		Pattern emailAddresspattern=Pattern.compile(a);
+		
+		if(emailAddresspattern.matcher(word).matches()) {
+			
+			return true;
+		}
+		
+		else {
+			System.out.println("the email address you entered is incorrect");
+			return false;
+		}
+	}
+	
+}
